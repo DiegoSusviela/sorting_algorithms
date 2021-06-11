@@ -16,8 +16,7 @@ void insertion_sort_list(listint_t **list)
 	else
 	{
 		swap_nodes(holder, siguiente(holder));
-		if (!anterior(aux))
-			*list = aux;
+		*list = anterior(holder);
 		print_list(*list);
 	}
 
