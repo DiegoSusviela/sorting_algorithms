@@ -14,6 +14,7 @@ listint_t *crear_nodo(int n)
 	if (!nodo)
 		return (NULL);
 	/*nodo->n = n;*/
+	printf("%d",n);
 	nodo->prev = NULL;
 	nodo->next = NULL;
 
