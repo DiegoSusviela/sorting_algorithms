@@ -1,4 +1,4 @@
-#include "algorithms.h"
+#include "sort.h"
 
 void swap_next(int *array, int i)
 {
