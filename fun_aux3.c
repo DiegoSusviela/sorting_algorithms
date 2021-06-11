@@ -44,3 +44,19 @@ listint_t *add_dnodeint(listint_t **head, int n)
 	*head = nuevo_nodo;
 	return (nuevo_nodo);
 }
+
+/**
+* swap_next - counts the length of a string
+* @array: the buffer pointer
+* @i: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
+void swap_next(int *array, size_t i)
+{
+	int aux = array[i];
+
+	array[i] = array[i + 1];
+	array[i + 1] = aux;
+}

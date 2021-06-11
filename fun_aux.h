@@ -17,6 +17,8 @@ void swap_nodes(listint_t *loc1, listint_t *loc2);
 size_t largo_cadena(listint_t *h);
 listint_t *add_dnodeint_end(listint_t **head, const int n);
 
+void swap_next(int *array, size_t i);
+
 /* fun_print */
 size_t print_dlistint(listint_t *h);
 int _putchar(char c, int fd);
