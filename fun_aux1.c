@@ -1,4 +1,4 @@
-#include "algorithms.h"
+#include "sort.h"
 
 /**
 * siguiente - counts the length of a string
