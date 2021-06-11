@@ -37,5 +37,6 @@ void insertion_sort_list(listint_t **list)
 			if (!anterior(aux))
 				*list = aux;
 		}
+		aux = siguiente(holder);
 	}
 }
