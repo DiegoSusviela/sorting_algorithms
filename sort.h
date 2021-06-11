@@ -12,5 +12,8 @@
 
 #include "struct.h"
 #include "fun_aux.h"
+#include "fun_aux1.c"
+#include "fun_aux2.c"
+#include "fun_aux3.c"
 
 #endif /* ALGO_H */
