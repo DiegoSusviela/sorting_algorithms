@@ -12,20 +12,27 @@ void insertion_sort_list(listint_t **list)
 	
 	holder = *list;
 	if (info_dato(siguiente(holder)) > info_dato(holder))
-		holder = siguiente;
+		holder = siguiente(holder);
 	else
+	{
 		swap_nodes(holder, siguiente(holder));
+		if (!anterior(aux))
+			*list = aux;
+		print_list(*list);
+	}
 
 	aux = siguiente(holder);
 	while (siguiente(holder))
 	{
 		if (info_dato(siguiente(holder)) > info_dato(holder))
-			holder = siguiente;
+			holder = siguiente(holder);
 		else
 		{
 			while (anterior(aux) && info_dato(aux) < info_dato(anterior(aux)))
 			{
 				swap_nodes(aux, anterior(aux));
+				if (!anterior(aux))
+					*list = aux;
 				print_list(*list);
 			}
 			if (!anterior(aux))
