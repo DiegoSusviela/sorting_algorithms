@@ -61,3 +61,8 @@ void swap_next(int *array, size_t i)
 	array[i] = array[i + 1];
 	array[i + 1] = aux;
 }
+
+int info_dato(listint_t *nodo)
+{
+	return (nodo->n);
+}
