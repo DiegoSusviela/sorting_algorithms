@@ -15,7 +15,7 @@ void insertion_sort_list(listint_t **list)
 		holder = siguiente(holder);
 	else
 	{
-		swap_nodes(holder, siguiente(holder));
+		swap_nodes_1(holder, siguiente(holder));
 		*list = anterior(holder);
 		print_list(*list);
 	}
@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			while (anterior(aux) && info_dato(aux) < info_dato(anterior(aux)))
 			{
-				swap_nodes(aux, anterior(aux));
+				swap_nodes_1(anterior(aux), aux);
 				if (!anterior(aux))
 					*list = aux;
 				print_list(*list);

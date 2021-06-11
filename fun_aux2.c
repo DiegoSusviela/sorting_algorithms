@@ -18,6 +18,28 @@ listint_t *remover_de_cadenna(listint_t *loc)
 
 	return (loc);
 }
+/**
+* swap_nodes_1 - counts the length of a string
+* @loc1: the buffer pointer
+* @loc2: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
+void swap_nodes_1(listint_t *loc1, listint_t *loc2)
+{
+	listint_t *holder1 = anterior(loc1), *holder2 = siguiente(loc2);
+
+	loc2->prev = anterior(loc1);
+	loc1->next = siguiente(loc2);
+	loc2->next = loc1;
+	loc1->prev = loc2;
+	if (holder1)
+		holder1->next = loc2;
+	if (holder2)
+		holder2->prev = loc1;
+}
+
 
 /**
 * swap_nodes - counts the length of a string
@@ -27,7 +49,7 @@ listint_t *remover_de_cadenna(listint_t *loc)
 * Return: the length of the string
 */
 
-void swap_nodes(listint_t *loc1, listint_t *loc2)
+void swap_nodes_2(listint_t *loc1, listint_t *loc2)
 {
 	listint_t *holder1 = siguiente(loc1), *holder2 = anterior(loc1);
 

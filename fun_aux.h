@@ -14,7 +14,8 @@ void insertar_despues(listint_t *a_insertar, listint_t *lugar);
 listint_t *crear_nodo(int n);
 listint_t *add_dnodeint(listint_t **head, int n);
 listint_t *remover_de_cadenna(listint_t *loc);
-void swap_nodes(listint_t *loc1, listint_t *loc2);
+void swap_nodes_2(listint_t *loc1, listint_t *loc2);
+void swap_nodes_1(listint_t *loc1, listint_t *loc2);
 size_t largo_cadena(listint_t *h);
 listint_t *add_dnodeint_end(listint_t **head, const int n);
 
