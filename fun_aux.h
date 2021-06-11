@@ -1,6 +1,8 @@
 #ifndef FUN_AUX_H
 #define FUN_AUX_H
 
+void bubble_sort(int *array, size_t size);
+
 /* fun_aux1 */
 listint_t *siguiente(listint_t *loc);
 listint_t *anterior(listint_t *loc);

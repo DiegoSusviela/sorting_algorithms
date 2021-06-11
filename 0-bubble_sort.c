@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void swap_next(int *array, int i)
+void swap_next(int *array, size_t i)
 {
 	int aux = array[i];
 
@@ -10,7 +10,7 @@ void swap_next(int *array, int i)
 
 void bubble_sort(int *array, size_t size)
 {
-	int i;
+	size_t i;
 
 	size--;
 	while (size > 0)
