@@ -3,7 +3,7 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-int ordenador(int *array, int pos1, int pos2)
+int ordenador(int *array, int pos1, int pos2, size_t size)
 {
 	int pivote = pos2, izq = pos1, der = pos2 - 1;
 
@@ -12,6 +12,7 @@ int ordenador(int *array, int pos1, int pos2)
 		if (array[der] < array[pivote] && array[izq] > array[pivote])
 		{
 			swap_elements(array, array[izq], array[der]);
+			print_array(array, size);
 			izq++;
 			der--;
 		}
@@ -21,24 +22,27 @@ int ordenador(int *array, int pos1, int pos2)
 			der--;
 	}
 	if (array[izq] > array[pivote])
+	{
 		swap_elements(array, array[izq], array[pivote]);
+		print_array(array, size);
+	}
 	return (izq);
 }
 
-void quick_recur(int *array, int inicio, int final)
+void quick_recur(int *array, int inicio, int final, size_t size)
 {
 	int pivote;
 
-	pivote = ordenador(array, inicio, final);
+	pivote = ordenador(array, inicio, final, size);
 	if (inicio < pivote - 1)
-		quick_recur(array, inicio, pivote - 1);
+		quick_recur(array, inicio, pivote - 1, size);
 	if (final > pivote + 1)
-		quick_recur(array, pivote + 1, final);
+		quick_recur(array, pivote + 1, final, size);
 }
 
 void quick_sort(int *array, size_t size)
 {
 	int final = size - 1;
 
-	quick_recur(array, 0, final);
+	quick_recur(array, 0, final, size);
 }
