@@ -54,5 +54,6 @@ void quick_sort(int *array, size_t size)
 {
 	int final = size - 1;
 
-	quick_recur(array, 0, final, size);
+	if (size)
+		quick_recur(array, 0, final, size);
 }
