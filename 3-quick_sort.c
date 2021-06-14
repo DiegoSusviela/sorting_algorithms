@@ -21,14 +21,14 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 		if (array[der] > array[pivote] && der)
 			der--;
 	}
-	if (array[izq] > array[der])
+	if (array[izq] > array[pivote])
 	{
 		swap_elements(array, izq, pivote);
 		print_array(array, size);
 	}
 	else
 	{
-		swap_elements(array, der, pivote);
+		swap_elements(array, izq + 1, pivote);
 		print_array(array, size);
 	}
 	return (izq);
