@@ -43,19 +43,27 @@ void quick_recur(int *array, int inicio, int final, size_t size)
 {
 	int pivote;
 
+	if (inicio < final)
+	{
+		pivote = ordenador(array, inicio, final, size);
+		quick_recur(array, inicio, pivote - 1, size);
+		quick_recur(array, pivote + 1, final, size);
+	}
+	/*
 	pivote = ordenador(array, inicio, final, size);
 	if (inicio < pivote - 1)
 		quick_recur(array, inicio, pivote - 1, size);
 	if (final > pivote + 1)
 		quick_recur(array, pivote + 1, final, size);
+	*/
 }
 
 void quick_sort(int *array, size_t size)
 {
 	int final = size - 1;
 
-	if (!array || !size)
+	if (!array || size < 2)
 		return;
 
-		quick_recur(array, 0, final, size);
+	quick_recur(array, 0, final, size);
 }
