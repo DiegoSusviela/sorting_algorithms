@@ -26,5 +26,5 @@ void selection_sort(int *array, size_t size)
 			swap_elements(array, candidato, pos1);
 			print_array(array, size);
 		}
-	} 
+	}
 }
