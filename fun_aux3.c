@@ -67,7 +67,7 @@ int info_dato(listint_t *nodo)
 	return (nodo->n);
 }
 
-void swap_elements(int *array, int pos1, int pos2)
+void swap_elements(int *array, unsigned int pos1, unsigned int pos2)
 {
 	int aux;
 

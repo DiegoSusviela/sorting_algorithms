@@ -22,7 +22,7 @@ listint_t *add_dnodeint_end(listint_t **head, const int n);
 
 void swap_next(int *array, size_t i);
 int info_dato(listint_t *nodo);
-void swap_elements(int *array, int pos1, int pos2);
+void swap_elements(int *array, unsigned int pos1, unsigned int pos2);
 
 /* fun_print */
 size_t print_dlistint(listint_t *h);
