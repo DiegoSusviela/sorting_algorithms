@@ -33,6 +33,8 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 			swap_elements(array, izq + 1, pivote);
 			print_array(array, size);
 		}
+		else
+			izq = pivote;
 	}
 	return (izq);
 }
