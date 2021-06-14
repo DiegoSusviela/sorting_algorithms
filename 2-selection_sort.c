@@ -7,7 +7,7 @@ void selection_sort(int *array, size_t size)
 {
 	unsigned int candidato, pos1, pos2;
 
-	if (!array)
+	if (!array || !size)
 		return;
 
 	for (pos1 = 0; pos1 < size; pos1++)
