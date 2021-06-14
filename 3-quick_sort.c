@@ -21,9 +21,14 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 		if (array[der] > array[pivote] && der)
 			der--;
 	}
-	if (array[izq] > array[pivote])
+	if (array[izq] > array[der])
 	{
 		swap_elements(array, izq, pivote);
+		print_array(array, size);
+	}
+	else
+	{
+		swap_elements(array, der, pivote);
 		print_array(array, size);
 	}
 	return (izq);
@@ -34,9 +39,9 @@ void quick_recur(int *array, int inicio, int final, size_t size)
 	int pivote;
 
 	pivote = ordenador(array, inicio, final, size);
-	if (inicio <= pivote - 1)
+	if (inicio < pivote - 1)
 		quick_recur(array, inicio, pivote - 1, size);
-	if (final >= pivote + 1)
+	if (final > pivote + 1)
 		quick_recur(array, pivote + 1, final, size);
 }
 
