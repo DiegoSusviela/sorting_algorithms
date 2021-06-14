@@ -3,7 +3,6 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-
 void selection_sort(int *array, size_t size)
 {
 	unsigned int candidato, pos1, pos2;
