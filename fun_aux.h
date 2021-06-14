@@ -3,6 +3,7 @@
 
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void selection_sort(int *array, size_t size);
 
 /* fun_aux1 */
 listint_t *siguiente(listint_t *loc);
@@ -21,6 +22,7 @@ listint_t *add_dnodeint_end(listint_t **head, const int n);
 
 void swap_next(int *array, size_t i);
 int info_dato(listint_t *nodo);
+void swap_elements(int *array, int pos1, int pos2);
 
 /* fun_print */
 size_t print_dlistint(listint_t *h);

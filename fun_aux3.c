@@ -66,3 +66,12 @@ int info_dato(listint_t *nodo)
 {
 	return (nodo->n);
 }
+
+void swap_elements(int *array, int pos1, int pos2)
+{
+	int aux;
+
+	aux = array[pos1];
+	array[pos1] = array[pos2];
+	array[pos2] = aux;
+}
