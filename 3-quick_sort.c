@@ -48,6 +48,36 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 }
 
 /**
+* ordenador_no_eficiente - counts the length of a string
+* @pos1: the buffer pointer
+* @pos2: the buffer pointer
+* @size: alkdsnasjkld
+* @array: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
+
+int ordenador_no_eficiente(int *array, int pos1, int pos2, size_t size)
+{
+	int pivot = pos1, izq = pos1, der = pos2 - 1;
+
+	while (izq <= pos2)
+	{
+		if (array[der] < array[pivot])
+		{
+			swap_elements(array, izq, der);
+			if (der != izq)
+				print_array(array, size);
+			izq++;
+		}
+	}
+	swap_elements(array, izq, pos1);
+	if (array[pos1] != array[pivot])
+		print_array(array, size);
+	return (izq);
+}
+
+/**
 * quick_recur - counts the length of a string
 * @array: the buffer pointer
 * @inicio: the buffer pointer
@@ -63,7 +93,7 @@ void quick_recur(int *array, int inicio, int final, size_t size)
 
 	if (inicio < final)
 	{
-		pivote = ordenador(array, inicio, final, size);
+		pivote = ordenador_no_eficiente(array, inicio, final, size);
 		quick_recur(array, inicio, pivote - 1, size);
 		quick_recur(array, pivote + 1, final, size);
 	}
