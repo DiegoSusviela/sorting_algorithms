@@ -13,11 +13,11 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
     if(iEnd - iBegin <= 1)
         return;
     iMiddle = (iEnd + iBegin) / 2;
-    maxi_merge_split(A, iBegin,  iMiddle, B);
-    maxi_merge_split(A, iMiddle,    iEnd, B);
 	printf("Merging...\n");
+    maxi_merge_split(A, iBegin,  iMiddle, B);
 	printf("[left:] ");
 	print_array(A, iMiddle - iBegin);
+    maxi_merge_split(A, iMiddle,    iEnd, B);
 	printf("[right:] ");
 	print_array(B, iEnd - iMiddle);
     maxi_merge(B, iBegin, iMiddle, iEnd, A);
