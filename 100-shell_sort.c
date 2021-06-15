@@ -6,7 +6,7 @@
 void swapper(unsigned int gap_exp, int *array, unsigned int final)
 {
 	int gap = gap_exp, fin = final;
-	int holder, aux;
+	int holder  = gap, aux;
 
 
 	/*printf("gap: %d\n", gap);*/
