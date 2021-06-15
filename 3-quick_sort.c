@@ -14,19 +14,20 @@
 
 int ordenador(int *array, int pos1, int pos2, size_t size)
 {
-	unsigned int pivote = pos2, izq = pos1, der = pos2 - 1;
+	unsigned int pivote = pos2, izq = pos1;
 
-	while (izq < der)
+	pos2--;
+	while (izq < pos2)
 	{
-		if (array[der] < array[pivote] && array[izq] > array[pivote])
+		if (array[pos2] < array[pivote] && array[izq] > array[pivote])
 		{
-			swap_elements(array, izq, der);
+			swap_elements(array, izq, pos2);
 			print_array(array, size);
 		}
 		if (array[izq] < array[pivote])
 			izq++;
-		if (array[der] > array[pivote] && der)
-			der--;
+		if (array[pos2] > array[pivote] && pos2)
+			pos2--;
 	}
 	if (array[izq] > array[pivote])
 	{
