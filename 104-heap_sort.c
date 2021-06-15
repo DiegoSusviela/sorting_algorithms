@@ -45,11 +45,9 @@ void maker(int *array, size_t size)
 {
 	size_t leg = (size / 2) - 1;
 
-	while (1)
+	while (leg + 1)
 	{
 		shifter(array, leg, size - 1, size);
-		if (!leg)
-			break;
 		leg--;
 	}
 }
