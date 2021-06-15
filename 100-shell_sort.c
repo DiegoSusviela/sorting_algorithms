@@ -9,15 +9,15 @@ void swapper(int gap_exp, int *array, int final)
 	int holder  = gap, aux, h2, i, n, temp, j;
 
 	for (i = gap; i <= final; i += 1)
-    {
-        
-        temp = array[i];
-        
-        for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
-        {
-            array[j] = array[j - gap];
-        }
-        array[j] = temp;
+	{
+		temp = array[i];
+		
+		for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+		{
+			array[j] = array[j - gap];
+		}
+		print("test\n");
+		array[j] = temp;
 	}
 
 	/*printf("gap: %d\n", gap);*/
