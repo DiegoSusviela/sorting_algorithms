@@ -9,7 +9,7 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 	int holder, aux;
 
 
-	printf("gap: %d\n", gap);
+	/*printf("gap: %d\n", gap);*/
 
 	/*unsigned int candidato, pos1, pos2;*/
 
