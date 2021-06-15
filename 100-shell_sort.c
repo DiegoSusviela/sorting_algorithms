@@ -48,6 +48,7 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 			while ((aux - 1 >= 0) && array[aux] < array[aux - 1])
 			{
 				swap_elements(array, aux - 1, aux);
+				aux--;
 			}
 		}
 		aux = holder + 1;
