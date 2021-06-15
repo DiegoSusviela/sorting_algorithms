@@ -106,6 +106,7 @@ void maxi_merge_sort(int *A, int *B, int n)
 void merge_sort(int *array, size_t size)
 {
 	int *b;
+
 	if (!array || size < 2)
 		return;
 
