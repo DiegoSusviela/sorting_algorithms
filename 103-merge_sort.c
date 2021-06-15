@@ -3,9 +3,6 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void maxi_merge_sort(int *A, int *B, int n);
-void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B);
-
 void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 {
 	int iMiddle;

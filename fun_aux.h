@@ -27,6 +27,11 @@ void swap_next(int *array, size_t i);
 int info_dato(listint_t *nodo);
 void swap_elements(int *array, unsigned int pos1, unsigned int pos2);
 
+void maxi_merge_sort(int *A, int *B, int n);
+void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B);
+void maxi_merge_split(int *B, int iBegin, int iEnd, int *A);
+void copy_array(int *A, int iBegin, int iEnd, int *B);
+
 /* fun_print */
 size_t print_dlistint(listint_t *h);
 int _putchar(char c, int fd);
