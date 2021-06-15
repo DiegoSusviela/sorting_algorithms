@@ -3,6 +3,9 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
+void TopDownMergeSort(int *A, int *B, int n);
+void TopDownMerge(int *A, int iBegin, int iMiddle, int iEnd, int *B);
+
 void TopDownSplitMerge(int *B, int iBegin, int iEnd, int *A)
 {
 	int iMiddle;
