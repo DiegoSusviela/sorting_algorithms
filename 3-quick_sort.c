@@ -72,8 +72,8 @@ int ordenador_no_eficiente(int *array, int pos1, int pos2, size_t size)
 		}
 		der++;
 	}
-	swap_elements(array, izq, pos1);
-	if (array[pos1] != array[pivot])
+	swap_elements(array, izq, pos2);
+	if (array[pos2] != array[pivot])
 		print_array(array, size);
 	return (izq);
 }
