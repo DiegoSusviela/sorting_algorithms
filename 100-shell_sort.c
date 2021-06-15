@@ -3,7 +3,7 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void swapper(unsigned int gap_exp, int *array, int final)
+void swapper(unsigned int gap_exp, int *array, unsigned int final)
 {
 	unsigned int gap = 3^gap_exp, pos = 0;
 
@@ -28,9 +28,9 @@ void swapper(unsigned int gap_exp, int *array, int final)
 
 void shell_sort(int *array, size_t size)
 {
-	int gap_exp = 0, iter, final = size - 1;
+	unsigned int gap_exp = 0, final = size - 1;
 
-	while (3^(gap_exp + 1) < size)
+	while ((3^(gap_exp + 1)) < size)
 		gap_exp++;
 	while (gap_exp > 0)
 	{
