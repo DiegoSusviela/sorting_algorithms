@@ -5,7 +5,7 @@
 
 void swapper(int gap, int *array, int final)
 {
-	int holder  = gap, aux, h2, i, n, temp, j;
+	int i, temp, j;
 
 	for (i = gap; i <= final; i += 1)
 	{
