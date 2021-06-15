@@ -19,7 +19,7 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 
 	if (iEnd - iBegin <= 1)
 		return;
-	iMiddle = (iEnd + iBegin) / 2;
+	iMiddle = ((iEnd + iBegin) + 1) / 2;
 	maxi_merge_split(A, iBegin, iMiddle, B);
 	maxi_merge_split(A, iMiddle, iEnd, B);
 	printf("Merging...\n");
