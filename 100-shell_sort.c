@@ -10,8 +10,9 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 
 	while (gap_exp)
 	{
-		gap = gap + (3^gap_exp);
+		gap = 3 * gap + 1;
 		gap_exp--;
+		printf("gap: %d\n", gap);
 	}
 
 	/*unsigned int candidato, pos1, pos2;*/
@@ -70,9 +71,11 @@ void shell_sort(int *array, size_t size)
 {
 	unsigned int gap_exp = 0, final = size - 1;
 
-	while ((3^(gap_exp + 1)) < size)
+	while ((3*gap_exp) + 1 < size)
+	{
 		gap_exp++;
-	while (gap_exp > 0)
+	}
+	while (gap_exp >= 0)
 	{
 		swapper(gap_exp, array, final);
 		print_array(array, size);
