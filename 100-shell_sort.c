@@ -43,9 +43,9 @@ void shell_sort(int *array, size_t size)
 
 	if (!array || size < 2)
 		return;
-	while ((3*gap) + 1 <= final)
+	while ((3 * gap) + 1 <= final)
 	{
-		gap = (3*gap) + 1;
+		gap = (3 * gap) + 1;
 	}
 	while (gap > 0)
 	{
