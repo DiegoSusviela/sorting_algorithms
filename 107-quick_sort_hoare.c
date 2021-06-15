@@ -78,7 +78,7 @@ void quick_recur_1(int *array, int inicio, int final, size_t size)
 }
 
 /**
-* quick_sort - counts the length of a string
+* quick_sort_hoare - counts the length of a string
 * @array: the buffer pointer
 * @size: adlkjnaslkjd
 * ---------------------------------
