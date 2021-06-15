@@ -3,10 +3,10 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void swapper(unsigned int gap_exp, int *array, unsigned int final)
+void swapper(int gap_exp, int *array, unsigned int final)
 {
 	int gap = gap_exp, fin = final;
-	int holder  = gap, aux;
+	int holder  = gap, aux, h2;
 
 
 	/*printf("gap: %d\n", gap);*/
@@ -38,20 +38,25 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 	}*/
 
 	holder = 0;
-	aux = holder + 1;
-	while (holder + 1 <= fin)
+	h2 = 0;
+	aux = holder + gap;
+	while (h2 + gap <= fin)
 	{
-		if (array[holder + 1] >= array[holder])
-			holder = holder + 1;
-		else
+		while (holder + gap <= fin)
 		{
-			while ((aux - 1 >= 0) && array[aux] < array[aux - 1])
+			if (array[holder + gap] >= array[holder])
+				holder = holder + gap;
+			else
 			{
-				swap_elements(array, aux - 1, aux);
-				aux--;
+				while ((aux - gap >= 0) && array[aux] < array[aux - gap])
+				{
+					swap_elements(array, aux - gap, aux);
+					aux--;
+				}
 			}
+			aux = holder + gap;
 		}
-		aux = holder + 1;
+		h2++;
 	}
 }
 
@@ -66,17 +71,18 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 
 void shell_sort(int *array, size_t size)
 {
-	unsigned int gap_exp = 1, final = size - 1;
+	unsigned int final = size - 1;
+	int gap = 1;
 
-	while ((3*gap_exp) + 1 < size)
+	while ((3*gap) + 1 < size)
 	{
-		gap_exp = (3*gap_exp) + 1;
+		gap = (3*gap) + 1;
 	}
-	gap_exp++;
-	while (gap_exp)
+	gap = (gap - 1) / 3;
+	while (gap >= 0)
 	{
-		swapper(gap_exp, array, final);
+		swapper(gap, array, final);
 		print_array(array, size);
-		gap_exp = (gap_exp - 1) / 3;
+		gap = (gap - 1) / 3;
 	}
 }
