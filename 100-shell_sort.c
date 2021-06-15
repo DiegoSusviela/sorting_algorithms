@@ -5,9 +5,20 @@
 
 void swapper(int gap_exp, int *array, int final)
 {
-	int gap = gap_exp, fin = final;
-	int holder  = gap, aux, h2;
+	int gap = gap_exp;
+	int holder  = gap, aux, h2, i, n, temp, j;
 
+	for (i = gap; i <= final; i += 1)
+    {
+        
+        temp = array[i];
+        
+        for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+        {
+            array[j] = array[j - gap];
+        }
+        array[j] = temp;
+	}
 
 	/*printf("gap: %d\n", gap);*/
 
@@ -37,27 +48,27 @@ void swapper(int gap_exp, int *array, int final)
 	*	}
 	}*/
 
-	holder = 0;
-	h2 = 0;
-	aux = holder + gap;
-	while (h2 + gap <= fin)
-	{
-		while (holder + gap <= fin)
-		{
-			if (array[holder + gap] >= array[holder])
-				holder = holder + gap;
-			else
-			{
-				while ((aux - gap >= 0) && array[aux] < array[aux - gap])
-				{
-					swap_elements(array, aux - gap, aux);
-					aux-= gap;
-				}
-			}
-			aux = holder + gap;
-		}
+	/*holder = 0;
+	*h2 = 0;
+	*aux = holder + gap;
+	*while (h2 + gap <= fin)
+	*{
+	*	while (holder + gap <= fin)
+	*	{
+	*		if (array[holder + gap] >= array[holder])
+	*			holder = holder + gap;
+	*		else
+	*		{
+	*			while ((aux - gap >= 0) && array[aux] < array[aux - gap])
+	*			{
+	*				swap_elements(array, aux - gap, aux);
+	*				aux-= gap;
+	*			}
+	*		}
+	*		aux = holder + gap;
+	*	}
 		h2++;
-	}
+	}*/
 }
 
 
@@ -79,7 +90,7 @@ void shell_sort(int *array, size_t size)
 		gap = (3*gap) + 1;
 	}
 	gap = (gap - 1) / 3;
-	while (gap >= 0)
+	while (gap > 0)
 	{
 		swapper(gap, array, final);
 		print_array(array, size);
