@@ -17,8 +17,6 @@ void swapper(int gap, int *array, int final)
 		}
 		array[j] = temp;
 	}
-	printf("test\n");
-
 	/*printf("gap: %d\n", gap);*/
 
 	/*unsigned int candidato, pos1, pos2;*/
@@ -90,7 +88,6 @@ void shell_sort(int *array, size_t size)
 	}
 	while (gap > 0)
 	{
-		printf("%d\n", gap);
 		swapper(gap, array, final);
 		print_array(array, size);
 		gap = (gap - 1) / 3;
