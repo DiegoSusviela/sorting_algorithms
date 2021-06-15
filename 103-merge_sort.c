@@ -26,8 +26,10 @@ void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
 {
 	int i = iBegin, j = iMiddle, k;
 
-	for (k = iBegin; k < iEnd; k++) {
-		if (i < iMiddle && (j >= iEnd || A[i] <= A[j])) {
+	for (k = iBegin; k < iEnd; k++)
+	{
+		if (i < iMiddle && (j >= iEnd || A[i] <= A[j]))
+		{
 			B[k] = A[i];
 			i = i + 1;
 		}
@@ -43,7 +45,7 @@ void copy_array(int *A, int iBegin, int iEnd, int *B)
 {
 	int k;
 
-	for(k = iBegin; k < iEnd; k++)
+	for (k = iBegin; k < iEnd; k++)
 		B[k] = A[k];
 }
 
