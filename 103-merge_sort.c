@@ -4,7 +4,7 @@
 #include "fun_aux3.c"
 
 /**
-* maxi_merge_sort - counts the length of gap_exp string
+* maxi_merge_split - counts the length of gap_exp string
 * @A: alkdsnasjkld
 * @iBegin: alkdsnasjkld
 * @iEnd: alkdsnasjkld
@@ -33,7 +33,7 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 }
 
 /**
-* maxi_merge_sort - counts the length of gap_exp string
+* maxi_merge - counts the length of gap_exp string
 * @A: alkdsnasjkld
 * @iBegin: alkdsnasjkld
 * @iEnd: alkdsnasjkld
@@ -63,7 +63,7 @@ void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
 }
 
 /**
-* maxi_merge_sort - counts the length of gap_exp string
+* copy_array - counts the length of gap_exp string
 * @A: alkdsnasjkld
 * @iBegin: alkdsnasjkld
 * @iEnd: alkdsnasjkld
