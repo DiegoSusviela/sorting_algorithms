@@ -3,6 +3,15 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
+/**
+* ordenador - counts the length of a string
+* @pos1: the buffer pointer
+* @pos2: the buffer pointer
+* @size: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
+
 int ordenador(int *array, int pos1, int pos2, size_t size)
 {
 	unsigned int pivote = pos2, izq = pos1, der = pos2 - 1;
@@ -13,8 +22,6 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 		{
 			swap_elements(array, izq, der);
 			print_array(array, size);
-			izq++;
-			der--;
 		}
 		if (array[izq] < array[pivote])
 			izq++;
@@ -39,6 +46,16 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 	return (izq);
 }
 
+/**
+* quick_recur - counts the length of a string
+* @array: the buffer pointer
+* @inicio: the buffer pointer
+* @final: alkdsnasjkld
+* @size: adlkjnaslkjd
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void quick_recur(int *array, int inicio, int final, size_t size)
 {
 	int pivote;
@@ -57,6 +74,14 @@ void quick_recur(int *array, int inicio, int final, size_t size)
 		quick_recur(array, pivote + 1, final, size);
 	*/
 }
+
+/**
+* quick_sort - counts the length of a string
+* @array: the buffer pointer
+* @size: adlkjnaslkjd
+* ---------------------------------
+* Return: the length of the string
+*/
 
 void quick_sort(int *array, size_t size)
 {
