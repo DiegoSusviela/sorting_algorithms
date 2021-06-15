@@ -75,9 +75,10 @@ void shell_sort(int *array, size_t size)
 	{
 		gap_exp++;
 	}
-	while (gap_exp >= 0)
+	gap_exp++;
+	while (gap_exp)
 	{
-		swapper(gap_exp, array, final);
+		swapper(gap_exp - 1, array, final);
 		print_array(array, size);
 		gap_exp--;
 	}
