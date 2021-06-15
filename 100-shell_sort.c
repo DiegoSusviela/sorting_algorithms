@@ -6,7 +6,7 @@
 void swapper(unsigned int gap_exp, int *array, unsigned int final)
 {
 	unsigned int gap = 3^gap_exp;
-	unsigned int candidato, pos1, pos2;
+	/*unsigned int candidato, pos1, pos2;*/
 
 	/*while (pos + gap <= final)
 	*{
