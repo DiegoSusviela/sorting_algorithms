@@ -8,6 +8,7 @@
 * @pos1: the buffer pointer
 * @pos2: the buffer pointer
 * @size: alkdsnasjkld
+* @array: alkdsnasjkld
 * ---------------------------------
 * Return: the length of the string
 */
@@ -67,11 +68,11 @@ void quick_recur(int *array, int inicio, int final, size_t size)
 		quick_recur(array, pivote + 1, final, size);
 	}
 	/*
-	pivote = ordenador(array, inicio, final, size);
-	if (inicio < pivote - 1)
-		quick_recur(array, inicio, pivote - 1, size);
-	if (final > pivote + 1)
-		quick_recur(array, pivote + 1, final, size);
+	* pivote = ordenador(array, inicio, final, size);
+	* if (inicio < pivote - 1)
+	* 	quick_recur(array, inicio, pivote - 1, size);
+	* if (final > pivote + 1)
+	*	quick_recur(array, pivote + 1, final, size);
 	*/
 }
 
