@@ -3,9 +3,8 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void swapper(int gap_exp, int *array, int final)
+void swapper(int gap, int *array, int final)
 {
-	int gap = gap_exp;
 	int holder  = gap, aux, h2, i, n, temp, j;
 
 	for (i = gap; i <= final; i += 1)
@@ -18,7 +17,7 @@ void swapper(int gap_exp, int *array, int final)
 		}
 		array[j] = temp;
 	}
-			printf("test\n");
+	printf("test\n");
 
 	/*printf("gap: %d\n", gap);*/
 
@@ -92,6 +91,7 @@ void shell_sort(int *array, size_t size)
 	gap = (gap - 1) / 3;
 	while (gap > 0)
 	{
+		printf("%d\n", gap);
 		swapper(gap, array, final);
 		print_array(array, size);
 		gap = (gap - 1) / 3;
