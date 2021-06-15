@@ -16,9 +16,9 @@ void swapper(int gap_exp, int *array, int final)
 		{
 			array[j] = array[j - gap];
 		}
-		printf("test\n");
 		array[j] = temp;
 	}
+			printf("test\n");
 
 	/*printf("gap: %d\n", gap);*/
 
