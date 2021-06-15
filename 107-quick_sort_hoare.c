@@ -15,7 +15,7 @@
 
 int ordenador(int *array, int pos1, int pos2, size_t size)
 {
-	unsigned int pivote = pos2, izq = pos1, der = pos2 - 1;
+	unsigned int pivote = pos2, izq = pos1, der = pos2;
 
 	while (izq < der)
 	{
@@ -64,7 +64,7 @@ void quick_recur_1(int *array, int inicio, int final, size_t size)
 	if (inicio < final)
 	{
 		pivote = ordenador(array, inicio, final, size);
-		quick_recur_1(array, inicio, pivote, size);
+		quick_recur_1(array, inicio, pivote - 1, size);
 		quick_recur_1(array, pivote + 1, final, size);
 	}
 	
