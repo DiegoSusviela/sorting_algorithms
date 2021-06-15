@@ -63,7 +63,6 @@ void maker(int *array, size_t size)
 void heap_sort(int *array, size_t size)
 {
 	size_t final;
-	int temp;
 
 	if (!array || size < 2)
 		return;
