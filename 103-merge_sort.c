@@ -16,12 +16,12 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
     maxi_merge_split(A, iBegin,  iMiddle, B);
     maxi_merge_split(A, iMiddle,    iEnd, B);
 	printf("Merging...\n");
-	printf("left:");
+	printf("[left:] ");
 	print_array(A, iMiddle - iBegin);
-	printf("right");
+	printf("[right:] ");
 	print_array(B, iEnd - iMiddle);
     maxi_merge(B, iBegin, iMiddle, iEnd, A);
-	printf("end");
+	printf("[Done:] ");
 	print_array(B, iEnd + iBegin);
 }
 
