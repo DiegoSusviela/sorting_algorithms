@@ -15,13 +15,13 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
     iMiddle = (iEnd + iBegin) / 2;
     maxi_merge_split(A, iBegin, iMiddle, B);
     maxi_merge_split(A, iMiddle, iEnd, B);
-    maxi_merge(B, iBegin, iMiddle, iEnd, A);
 	printf("Merging...\n");
 	printf("[left:] ");
 	print_array(A + iBegin, iMiddle - iBegin);
 	printf("[right:] ");
 	print_array(A + iMiddle, iEnd - 1);
 	printf("[Done:] ");
+    maxi_merge(B, iBegin, iMiddle, iEnd, A);
 	print_array(A, iEnd);
 }
 
