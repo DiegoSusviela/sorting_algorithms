@@ -60,6 +60,6 @@ void merge_sort(int *array, size_t size)
 {
 	int *b;
 
-	b = malloc(sizzeof(array));
+	b = malloc(sizeof(array));
 	TopDownMergeSort(array, b, size);
 }
