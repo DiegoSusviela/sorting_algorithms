@@ -16,7 +16,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (!list || !*list || !siguiente(*list))
 		return;
-	
+
 	holder = *list;
 	aux = siguiente(holder);
 	while (siguiente(holder))
