@@ -62,10 +62,26 @@ void swap_next(int *array, size_t i)
 	array[i + 1] = aux;
 }
 
+/**
+* info_dato - counts the length of a string
+* @nodo: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
 int info_dato(listint_t *nodo)
 {
 	return (nodo->n);
 }
+
+/**
+* swap_elements - counts the length of a string
+* @array: the buffer pointer
+* @pos1: the buffer pointer
+* @pos2: ajksdbnaskjd
+* ---------------------------------
+* Return: the length of the string
+*/
 
 void swap_elements(int *array, unsigned int pos1, unsigned int pos2)
 {

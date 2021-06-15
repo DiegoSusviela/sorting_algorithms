@@ -3,6 +3,14 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
+/**
+* bubble_sort - counts the length of a string
+* @array: the buffer pointer
+* @size: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, largo = size;

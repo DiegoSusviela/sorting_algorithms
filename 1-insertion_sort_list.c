@@ -3,6 +3,13 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
+/**
+* insertion_sort_list - counts the length of a string
+* @list: the buffer pointer
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *holder, *aux;
@@ -11,14 +18,6 @@ void insertion_sort_list(listint_t **list)
 		return;
 	
 	holder = *list;
-	/*if (info_dato(siguiente(holder)) > info_dato(holder))
-		holder = siguiente(holder);
-	else
-	{
-		swap_nodes_1(holder, siguiente(holder));
-		*list = anterior(holder);
-		print_list(*list);
-	}*/
 	aux = siguiente(holder);
 	while (siguiente(holder))
 	{
