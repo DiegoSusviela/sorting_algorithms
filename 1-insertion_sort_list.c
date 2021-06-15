@@ -19,11 +19,10 @@ void insertion_sort_list(listint_t **list)
 		*list = anterior(holder);
 		print_list(*list);
 	}
-
 	aux = siguiente(holder);
 	while (siguiente(holder))
 	{
-		if (info_dato(siguiente(holder)) > info_dato(holder))
+		if (info_dato(siguiente(holder)) >= info_dato(holder))
 			holder = siguiente(holder);
 		else
 		{
