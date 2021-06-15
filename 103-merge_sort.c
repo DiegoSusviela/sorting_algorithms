@@ -69,5 +69,4 @@ void merge_sort(int *array, size_t size)
 
 	b = malloc(sizeof(array));
 	maxi_merge_sort(array, b, size);
-	free(b);
 }
