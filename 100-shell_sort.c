@@ -5,15 +5,33 @@
 
 void swapper(unsigned int gap_exp, int *array, unsigned int final)
 {
-	unsigned int gap = 3^gap_exp, pos = 0;
+	unsigned int gap = 3^gap_exp;
+	unsigned int candidato, pos1, pos2;
 
-	while (pos + gap <= final)
+	/*while (pos + gap <= final)
+	*{
+	*	if (array[pos] > array[pos + gap])
+	*	{
+	*		swap_elements(array, pos, pos + gap);
+	*	}
+	*	pos++;
+	*}
+	*/
+
+	for (pos1 = 0; pos1 + gap < final; pos1++)
 	{
-		if (array[pos] > array[pos + gap])
+		candidato = pos1;
+		pos2 = pos1 + gap;
+		while (array[pos2])
 		{
-			swap_elements(array, pos, pos + gap);
+			if (array[pos2] < array[candidato])
+				candidato = pos2;
+			pos2+= gap;
 		}
-		pos++;
+		if (candidato != pos1)
+		{
+			swap_elements(array, candidato, pos1);
+		}
 	}
 }
 
