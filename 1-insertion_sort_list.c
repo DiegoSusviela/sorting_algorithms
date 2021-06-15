@@ -29,12 +29,10 @@ void insertion_sort_list(listint_t **list)
 			while (anterior(aux) && info_dato(aux) < info_dato(anterior(aux)))
 			{
 				swap_nodes_1(anterior(aux), aux);
-				if (!anterior(aux))
+				if (!anterior(anterior(aux)))
 					*list = aux;
 				print_list(*list);
 			}
-			if (!anterior(aux))
-				*list = aux;
 		}
 		aux = siguiente(holder);
 	}
