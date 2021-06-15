@@ -61,7 +61,7 @@ int ordenador_no_eficiente(int *array, int pos1, int pos2, size_t size)
 {
 	int pivot = pos2, izq = pos1, der = pos1;
 
-	while (der <= pos2)
+	while (der < pos2)
 	{
 		if (array[der] < array[pivot])
 		{
