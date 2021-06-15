@@ -45,9 +45,11 @@ void maker(int *array, size_t size)
 {
 	size_t leg = (size / 2) - 1;
 
-	while (leg)
+	while (1)
 	{
 		shifter(array, leg, size - 1, size);
+		if (!leg)
+			break;
 		leg--;
 	}
 }
@@ -68,7 +70,7 @@ void heap_sort(int *array, size_t size)
 		return;
 	maker(array, size);
 	final = size - 1;
-	while (final > 0)
+	while (final)
 	{
 		swap_elements(array, final, 0);
 		print_array(array, size);
