@@ -5,7 +5,7 @@
 
 void swapper(unsigned int gap_exp, int *array, unsigned int final)
 {
-	int gap = 1, fin = final;
+	int gap = gap_exp, fin = final;
 	int holder, aux;
 
 
