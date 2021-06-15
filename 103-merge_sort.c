@@ -71,6 +71,4 @@ void merge_sort(int *array, size_t size)
 	if (!b || !array || size < 2)
 		return;
 	maxi_merge_sort(array, b, size);
-	fflush(0);
-	free(b);
 }
