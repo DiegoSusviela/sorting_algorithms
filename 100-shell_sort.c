@@ -69,11 +69,11 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 
 void shell_sort(int *array, size_t size)
 {
-	unsigned int gap_exp = 0, final = size - 1;
+	unsigned int gap_exp = 1, final = size - 1;
 
 	while ((3*gap_exp) + 1 < size)
 	{
-		gap_exp++;
+		gap_exp = (3*gap_exp) + 1;
 	}
 	gap_exp++;
 	while (gap_exp)
