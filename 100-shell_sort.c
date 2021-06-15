@@ -88,7 +88,6 @@ void shell_sort(int *array, size_t size)
 	{
 		gap = (3*gap) + 1;
 	}
-	gap = (gap - 1) / 3;
 	while (gap > 0)
 	{
 		printf("%d\n", gap);
