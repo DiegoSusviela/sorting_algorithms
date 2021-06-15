@@ -66,7 +66,7 @@ int ordenador_no_eficiente(int *array, int pos1, int pos2, size_t size)
 		if (array[der] < array[pivot])
 		{
 			swap_elements(array, der, izq);
-			if (der != der)
+			if (izq != der)
 				print_array(array, size);
 			izq++;
 		}
