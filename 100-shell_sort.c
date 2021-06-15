@@ -92,7 +92,7 @@ void shell_sort(int *array, size_t size)
 	int gap = 1;
 
 	if (!array || size < 2)
-		return (NULL);
+		return;
 	while ((3*gap) + 1 <= final)
 	{
 		gap = (3*gap) + 1;
