@@ -22,7 +22,7 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 	print_array(B + iMiddle, iEnd - iMiddle);
 	printf("[Done:] ");
     maxi_merge(B, iBegin, iMiddle, iEnd, A);
-	print_array(A, iEnd);
+	print_array(A + iBegin, iEnd - iBegin);
 }
 
 void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
