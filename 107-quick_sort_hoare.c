@@ -19,7 +19,7 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 
 	while (izq < der)
 	{
-		if (array[der] < array[pivote] && array[izq] > array[pivote])
+		if (array[der] <= array[pivote] && array[izq] > array[pivote])
 		{
 			swap_elements(array, izq, der);
 			print_array(array, size);
