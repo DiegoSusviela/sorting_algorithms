@@ -3,22 +3,29 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void TopDownMergeSort(int *A, int *B, int n);
-void TopDownMerge(int *A, int iBegin, int iMiddle, int iEnd, int *B);
+void maxi_merge_sort(int *A, int *B, int n);
+void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B);
 
-void TopDownSplitMerge(int *B, int iBegin, int iEnd, int *A)
+void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 {
 	int iMiddle;
 
     if(iEnd - iBegin <= 1)
         return;
     iMiddle = (iEnd + iBegin) / 2;
-    TopDownSplitMerge(A, iBegin,  iMiddle, B);
-    TopDownSplitMerge(A, iMiddle,    iEnd, B);
-    TopDownMerge(B, iBegin, iMiddle, iEnd, A);
+    maxi_merge_split(A, iBegin,  iMiddle, B);
+    maxi_merge_split(A, iMiddle,    iEnd, B);
+	printf("Merging...\n");
+	printf("left:");
+	print_array(A, iMiddle - iBegin);
+	printf("right");
+	print_array(B, iEnd - iMiddle);
+    maxi_merge(B, iBegin, iMiddle, iEnd, A);
+	printf("end");
+	print_array(B, iEnd + iBegin);
 }
 
-void TopDownMerge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
+void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
 {
     int i = iBegin, j = iMiddle, k;
  
@@ -33,7 +40,7 @@ void TopDownMerge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
     }
 }
 
-void CopyArray(int *A, int iBegin, int iEnd, int *B)
+void copy_array(int *A, int iBegin, int iEnd, int *B)
 {
 	int k;
 
@@ -41,10 +48,10 @@ void CopyArray(int *A, int iBegin, int iEnd, int *B)
         B[k] = A[k];
 }
 
-void TopDownMergeSort(int *A, int *B, int n)
+void maxi_merge_sort(int *A, int *B, int n)
 {
-    CopyArray(A, 0, n, B);
-    TopDownSplitMerge(B, 0, n, A);
+    copy_array(A, 0, n, B);
+    maxi_merge_split(B, 0, n, A);
 }
 
 /**
@@ -61,5 +68,6 @@ void merge_sort(int *array, size_t size)
 	int *b;
 
 	b = malloc(sizeof(array));
-	TopDownMergeSort(array, b, size);
+	maxi_merge_sort(array, b, size);
+	free(b);
 }
