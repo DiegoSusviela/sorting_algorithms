@@ -70,7 +70,6 @@ void shell_sort(int *array, size_t size)
 	{
 		gap_exp = (3*gap_exp) + 1;
 	}
-	gap_exp++;
 	while (gap_exp)
 	{
 		swapper(gap_exp, array, final);
