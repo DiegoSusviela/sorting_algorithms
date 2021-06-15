@@ -6,10 +6,11 @@
 void swapper(unsigned int gap_exp, int *array, unsigned int final)
 {
 	int gap = 1, fin = final;
+	int holder, aux;
 
 	while (gap_exp)
 	{
-		gap = gap + 3^gap_exp;
+		gap = gap + (3^gap_exp);
 		gap_exp--;
 	}
 
@@ -38,7 +39,6 @@ void swapper(unsigned int gap_exp, int *array, unsigned int final)
 	*		swap_elements(array, candidato, pos1);
 	*	}
 	}*/
-	int holder, aux;
 
 	holder = 0;
 	aux = holder + gap;
