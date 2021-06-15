@@ -59,17 +59,18 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 
 int ordenador_no_eficiente(int *array, int pos1, int pos2, size_t size)
 {
-	int pivot = pos1, izq = pos1, der = pos2 - 1;
+	int pivot = pos2, izq = pos1, der = pos1;
 
-	while (izq <= pos2)
+	while (der <= pos2)
 	{
 		if (array[der] < array[pivot])
 		{
-			swap_elements(array, izq, der);
+			swap_elements(array, der, izq);
 			if (der != izq)
 				print_array(array, size);
 			izq++;
 		}
+		der++;
 	}
 	swap_elements(array, izq, pos1);
 	if (array[pos1] != array[pivot])
