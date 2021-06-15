@@ -17,7 +17,7 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
     maxi_merge_split(A, iMiddle, iEnd, B);
 	printf("Merging...\n");
 	printf("[left:] ");
-	print_array(A + iBegin, iMiddle - iBegin);
+	print_array(B + iBegin, iMiddle - iBegin);
 	printf("[right:] ");
 	print_array(B + iMiddle, iEnd - iMiddle);
 	printf("[Done:] ");
