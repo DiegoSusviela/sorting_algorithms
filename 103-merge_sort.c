@@ -3,6 +3,16 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
+/**
+* maxi_merge_sort - counts the length of gap_exp string
+* @A: alkdsnasjkld
+* @iBegin: alkdsnasjkld
+* @iEnd: alkdsnasjkld
+* @B: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 {
 	int iMiddle;
@@ -21,6 +31,17 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 	maxi_merge(B, iBegin, iMiddle, iEnd, A);
 	print_array(A + iBegin, iEnd - iBegin);
 }
+
+/**
+* maxi_merge_sort - counts the length of gap_exp string
+* @A: alkdsnasjkld
+* @iBegin: alkdsnasjkld
+* @iEnd: alkdsnasjkld
+* @B: alkdsnasjkld
+* @iMiddle: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
 
 void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
 {
@@ -41,6 +62,16 @@ void maxi_merge(int *A, int iBegin, int iMiddle, int iEnd, int *B)
 	}
 }
 
+/**
+* maxi_merge_sort - counts the length of gap_exp string
+* @A: alkdsnasjkld
+* @iBegin: alkdsnasjkld
+* @iEnd: alkdsnasjkld
+* @B: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void copy_array(int *A, int iBegin, int iEnd, int *B)
 {
 	int k;
@@ -48,6 +79,15 @@ void copy_array(int *A, int iBegin, int iEnd, int *B)
 	for (k = iBegin; k < iEnd; k++)
 		B[k] = A[k];
 }
+
+/**
+* maxi_merge_sort - counts the length of gap_exp string
+* @A: alkdsnasjkld
+* @B: alkdsnasjkld
+* @n: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
 
 void maxi_merge_sort(int *A, int *B, int n)
 {
@@ -62,7 +102,6 @@ void maxi_merge_sort(int *A, int *B, int n)
 * ---------------------------------
 * Return: the length of the string
 */
-
 
 void merge_sort(int *array, size_t size)
 {
