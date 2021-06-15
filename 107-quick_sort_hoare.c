@@ -84,7 +84,7 @@ void quick_recur_1(int *array, int inicio, int final, size_t size)
 * Return: the length of the string
 */
 
-void quick_sort(int *array, size_t size)
+void quick_sort_hoare(int *array, size_t size)
 {
 	int final = size - 1;
 
