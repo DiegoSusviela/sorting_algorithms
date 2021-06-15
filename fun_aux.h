@@ -9,6 +9,7 @@ void shell_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 void heap_sort(int *array, size_t size);
+void counting_sort(int *array, size_t size);
 
 /* fun_aux1 */
 listint_t *siguiente(listint_t *loc);
