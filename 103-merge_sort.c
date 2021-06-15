@@ -19,7 +19,7 @@ void maxi_merge_split(int *B, int iBegin, int iEnd, int *A)
 
 	if (iEnd - iBegin <= 1)
 		return;
-	iMiddle = (iEnd + iBegin)/ 2;
+	iMiddle = (iEnd + iBegin) / 2;
 	maxi_merge_split(A, iBegin, iMiddle, B);
 	maxi_merge_split(A, iMiddle, iEnd, B);
 	printf("Merging...\n");
@@ -106,9 +106,11 @@ void maxi_merge_sort(int *A, int *B, int n)
 void merge_sort(int *array, size_t size)
 {
 	int *b;
+	if (!array || size < 2)
+		return;
 
 	b = malloc(sizeof(int) * (size + 1));
-	if (!b || !array || size < 2)
+	if (!b)
 		return;
 	maxi_merge_sort(array, b, size);
 
