@@ -68,7 +68,7 @@ void heap_sort(int *array, size_t size)
 		return;
 	maker(array, size);
 	final = size - 1;
-	while (final)
+	while (final > 0)
 	{
 		swap_elements(array, final, 0);
 		print_array(array, size);
