@@ -16,7 +16,7 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 {
 	unsigned int pivote = pos2, izq = pos1, der = pos2 - 1;
 
-	while (izq <= der)
+	while (izq < der)
 	{
 		if (array[der] < array[pivote] && array[izq] > array[pivote])
 		{
