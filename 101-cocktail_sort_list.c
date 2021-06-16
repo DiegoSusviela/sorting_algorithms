@@ -9,15 +9,15 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 {
 	int flag = 0, iter = 1;
 
-	while (iter < largo)
+	while (iter < (largo - 1))
 	{
 		printf("%d\n", largo);
 		printf("%d\n", iter);
 		if (info_dato(loc) > info_dato(siguiente(loc)))
 		{
 			swap_nodes_1(siguiente(loc), loc);
-			/*if (loc == list)
-				list = anterior(loc);*/
+			if (loc == list)
+				list = anterior(loc);
 			print_list(list);
 			flag = 1;
 		}
