@@ -5,6 +5,15 @@
 
 void orderar_izq(listint_t **list, listint_t *loc, int largo);
 
+/**
+* ordenar_der - counts the length of gap_exp string
+* @largo: alkdsnasjkld
+* @loc: alkdsnasjkld
+* @list: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void ordenar_der(listint_t **list, listint_t *loc, int largo)
 {
 	int flag = 0, iter = 1;
@@ -28,6 +37,16 @@ void ordenar_der(listint_t **list, listint_t *loc, int largo)
 	if (largo > 2)
 		orderar_izq(&*list, anterior(loc), largo - 1);
 }
+
+/**
+* orderar_izq - counts the length of gap_exp string
+* @largo: alkdsnasjkld
+* @loc: alkdsnasjkld
+* @list: alkdsnasjkld
+* ---------------------------------
+* Return: the length of the string
+*/
+
 void orderar_izq(listint_t **list, listint_t *loc, int largo)
 {
 	int flag = 0, iter = 1;
