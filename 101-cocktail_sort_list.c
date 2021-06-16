@@ -3,37 +3,35 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void orderar_izq(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t *tope_der);
+void orderar_izq(listint_t *list, listint_t *loc, int largo);
 
-void ordenar_der(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t *tope_der)
+void ordenar_der(listint_t *list, listint_t *loc, int largo)
 {
-	int flag = 0;
+	int flag = 0, iter = 1;
 
-	while (loc != tope_der)
+	while (iter < largo)
 	{
 		if (info_dato(loc) > info_dato(siguiente(loc)))
 		{
 			swap_nodes_1(siguiente(loc), loc);
 			if (!anterior(anterior(loc)))
-			{
 				list = anterior(loc);
-				tope_izq = anterior(loc);
-			}
 			print_list(list);
 			flag = 1;
 		}
 		else
 			loc = siguiente(loc);
+		iter++;
 	}
 	if (!flag)
 		return;
-	orderar_izq(list, anterior(anterior(loc)), tope_izq, tope_der);
+	orderar_izq(list, anterior(loc), largo - 1);
 }
-void orderar_izq(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t *tope_der)
+void orderar_izq(listint_t *list, listint_t *loc, int largo)
 {
-	int flag = 0;
+	int flag = 0, iter = 1;
 
-	while (loc != tope_izq)
+	while (iter < largo)
 	{
 		if (info_dato(loc) < info_dato(anterior(loc)))
 		{
@@ -43,10 +41,13 @@ void orderar_izq(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t
 			print_list(list);
 			flag = 1;
 		}
+		else
+			loc = siguiente(loc);
+		iter++;
 	}
 	if (!flag)
 		return;
-	ordenar_der(list, siguiente(siguiente(loc)), tope_izq, tope_der);
+	ordenar_der(list, siguiente(loc), largo - 1);
 }
 /**
 * cocktail_sort_list - counts the length of a string
@@ -58,11 +59,11 @@ void orderar_izq(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tope_der = *list, *tope_izq = *list, *loc = *list;
+	int largo = 0;
 
 	if (!list || !*list || !siguiente(*list))
 		return;
 
-	while (siguiente(tope_der))
-		tope_der = siguiente(tope_der);
-	ordenar_der(*list, loc, tope_izq, tope_der);
+	largo = largo_cadena(list);
+	ordenar_der(*list, loc, largo);
 }
