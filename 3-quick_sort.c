@@ -99,7 +99,7 @@ void quick_recur(int *array, int inicio, int final, size_t size)
 	if (inicio < final)
 	{
 		pivote = ordenador_no_eficiente(array, inicio, final, size);
-		quick_recur(array, inicio, pivote - 1, size);
+		quick_recur(array, inicio, pivote, size);
 		quick_recur(array, pivote + 1, final, size);
 	}
 	/*
