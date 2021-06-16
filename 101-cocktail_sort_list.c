@@ -16,8 +16,8 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 		if (info_dato(loc) > info_dato(siguiente(loc)))
 		{
 			swap_nodes_1(siguiente(loc), loc);
-			if (loc == list)
-				list = anterior(loc);
+			/*if (loc == list)
+				list = anterior(loc);*/
 			print_list(list);
 			flag = 1;
 		}
@@ -72,5 +72,5 @@ void cocktail_sort_list(listint_t **list)
 	largo = largo_cadena(*list);
 	printf("%d\n", largo);
 	ordenar_der(*list, loc, largo);
-	
+
 }
