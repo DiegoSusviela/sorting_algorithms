@@ -25,7 +25,7 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 	}
 	if (!flag)
 		return;
-	if (largo > 2)
+	if (largo > 1)
 		orderar_izq(list, anterior(loc), largo - 1);
 }
 void orderar_izq(listint_t *list, listint_t *loc, int largo)
@@ -48,7 +48,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 	}
 	if (!flag)
 		return;
-	if (largo > 2)
+	if (largo > 1)
 		ordenar_der(list, siguiente(loc), largo - 1);
 }
 /**
@@ -67,5 +67,8 @@ void cocktail_sort_list(listint_t **list)
 		return;
 
 	largo = largo_cadena(*list);
+	printf("%d\n", largo);
+	/*
 	ordenar_der(*list, loc, largo);
+	*/
 }
