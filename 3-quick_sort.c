@@ -59,7 +59,7 @@ int ordenador(int *array, int pos1, int pos2, size_t size)
 
 int ordenador_no_eficiente(int *array, int pos1, int pos2, size_t size)
 {
-	int pivot = pos2, izq = pos1, der = pos1;
+	int pivot = pos2, izq = pos1 - 1, der = pos1;
 
 	while (der < pos2)
 	{
