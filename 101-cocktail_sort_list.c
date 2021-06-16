@@ -13,7 +13,7 @@ void ordenar_der(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t
 	{
 		if (info_dato(loc) > info_dato(siguiente(loc)))
 		{
-			swap_nodes_1(anterior(loc), loc);
+			swap_nodes_1(siguiente(loc), loc);
 			if (!anterior(anterior(loc)))
 			{
 				list = anterior(loc);
