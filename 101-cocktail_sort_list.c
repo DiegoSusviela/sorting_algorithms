@@ -14,7 +14,7 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 		if (info_dato(loc) > info_dato(siguiente(loc)))
 		{
 			swap_nodes_1(loc, siguiente(loc));
-			if (loc == list)
+			if (anterior(anterior(loc)))
 				list = anterior(loc);
 			print_list(list);
 			flag = 1;
@@ -25,7 +25,7 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 	}
 	if (!flag)
 		return;
-	if (largo > 1)
+	if (largo > 0)
 		orderar_izq(list, anterior(loc), largo - 1);
 }
 void orderar_izq(listint_t *list, listint_t *loc, int largo)
@@ -48,7 +48,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 	}
 	if (!flag)
 		return;
-	if (largo > 1)
+	if (largo > 0)
 		ordenar_der(list, siguiente(loc), largo - 1);
 }
 /**
@@ -68,5 +68,4 @@ void cocktail_sort_list(listint_t **list)
 
 	largo = largo_cadena(*list);
 	ordenar_der(*list, loc, largo);
-
 }
