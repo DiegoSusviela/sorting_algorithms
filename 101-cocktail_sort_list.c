@@ -16,7 +16,7 @@ void orderar_izq(listint_t **list, listint_t *loc, int largo);
 
 void ordenar_der(listint_t **list, listint_t *loc, int largo)
 {
-	int iter = 1;
+	int flag = 0, iter = 1;
 
 	while (iter < largo)
 	{
@@ -26,14 +26,14 @@ void ordenar_der(listint_t **list, listint_t *loc, int largo)
 			if (!anterior(anterior(loc)))
 				*list = anterior(loc);
 			print_list(*list);
-			/*flag = 1;*/
+			flag = 1;
 		}
 		else
 			loc = siguiente(loc);
 		iter++;
 	}
-
-
+	if (!flag)
+		return;
 	if (largo > 2)
 		orderar_izq(&*list, anterior(loc), largo - 1);
 }
@@ -49,7 +49,7 @@ void ordenar_der(listint_t **list, listint_t *loc, int largo)
 
 void orderar_izq(listint_t **list, listint_t *loc, int largo)
 {
-	int iter = 1;
+	int flag = 0, iter = 1;
 
 	while (iter < largo)
 	{
@@ -59,14 +59,14 @@ void orderar_izq(listint_t **list, listint_t *loc, int largo)
 			if (!anterior(loc))
 				*list = loc;
 			print_list(*list);
-			/*flag = 1;*/
+			flag = 1;
 		}
 		else
 			loc = anterior(loc);
 		iter++;
 	}
-	/*if (!flag)
-		return;*/
+	if (!flag)
+		return;
 	if (largo > 2)
 		ordenar_der(&*list, siguiente(loc), largo - 1);
 }
