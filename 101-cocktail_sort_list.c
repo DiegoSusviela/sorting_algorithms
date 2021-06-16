@@ -21,17 +21,14 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 			print_list(list);
 			flag = 1;
 		}
-		else
 			loc = siguiente(loc);
 		iter++;
 	}
 	if (!flag)
 		return;
 	printf("%d\n", largo);
-		/*
 	if (largo > 1)
 		orderar_izq(list, anterior(loc), largo - 1);
-		*/
 }
 void orderar_izq(listint_t *list, listint_t *loc, int largo)
 {
