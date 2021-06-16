@@ -64,6 +64,6 @@ void cocktail_sort_list(listint_t **list)
 	if (!list || !*list || !siguiente(*list))
 		return;
 
-	largo = largo_cadena(list);
+	largo = largo_cadena(*list);
 	ordenar_der(*list, loc, largo);
 }
