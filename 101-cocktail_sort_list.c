@@ -14,7 +14,7 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 		if (info_dato(loc) > info_dato(siguiente(loc)))
 		{
 			swap_nodes_1(loc, siguiente(loc));
-			if (anterior(anterior(loc)))
+			if (!anterior(anterior(loc)))
 				list = anterior(loc);
 			print_list(list);
 			flag = 1;
