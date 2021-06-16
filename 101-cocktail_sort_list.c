@@ -3,6 +3,7 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
+void orderar_izq(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t *tope_der);
 
 void orderar_der(listint_t *list, listint_t *loc, listint_t *tope_izq, listint_t *tope_der)
 {
