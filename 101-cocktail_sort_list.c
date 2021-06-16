@@ -58,7 +58,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *tope_der = *list, *tope_izq = *list, *loc = *list;
+	listint_t *loc = *list;
 	int largo = 0;
 
 	if (!list || !*list || !siguiente(*list))
