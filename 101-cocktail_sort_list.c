@@ -3,9 +3,9 @@
 #include "fun_aux2.c"
 #include "fun_aux3.c"
 
-void orderar_izq(listint_t *list, listint_t *loc, int largo);
+void orderar_izq(listint_t **list, listint_t *loc, int largo);
 
-void ordenar_der(listint_t *list, listint_t *loc, int largo)
+void ordenar_der(listint_t **list, listint_t *loc, int largo)
 {
 	int flag = 0, iter = 1;
 
@@ -15,8 +15,8 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 		{
 			swap_nodes_1(loc, siguiente(loc));
 			if (!anterior(anterior(loc)))
-				list = anterior(loc);
-			print_list(list);
+				*list = anterior(loc);
+			print_list(*list);
 			flag = 1;
 		}
 		else
@@ -26,9 +26,9 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 	if (!flag)
 		return;
 	if (largo > 2)
-		orderar_izq(&list, anterior(loc), largo - 1);
+		orderar_izq(&*list, anterior(loc), largo - 1);
 }
-void orderar_izq(listint_t *list, listint_t *loc, int largo)
+void orderar_izq(listint_t **list, listint_t *loc, int largo)
 {
 	int flag = 0, iter = 1;
 
@@ -38,8 +38,8 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 		{
 			swap_nodes_1(anterior(loc), loc);
 			if (!anterior(loc))
-				list = loc;
-			print_list(list);
+				*list = loc;
+			print_list(*list);
 			flag = 1;
 		}
 		else
@@ -49,7 +49,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 	if (!flag)
 		return;
 	if (largo > 2)
-		ordenar_der(&list, siguiente(loc), largo - 1);
+		ordenar_der(&*list, siguiente(loc), largo - 1);
 }
 /**
 * cocktail_sort_list - counts the length of a string
