@@ -18,9 +18,10 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 			swap_nodes_1(siguiente(loc), loc);
 			if (loc == list)
 				list = anterior(loc);
-			print_list(list);
+			/*print_list(list);*/
 			flag = 1;
 		}
+		else
 			loc = siguiente(loc);
 		iter++;
 	}
@@ -41,7 +42,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 			swap_nodes_1(anterior(loc), loc);
 			if (!anterior(loc))
 				list = loc;
-			print_list(list);
+			/*print_list(list);*/
 			flag = 1;
 		}
 		else
