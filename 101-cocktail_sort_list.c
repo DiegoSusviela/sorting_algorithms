@@ -26,7 +26,7 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 	if (!flag)
 		return;
 	if (largo > 2)
-		orderar_izq(list, anterior(loc), largo - 1);
+		orderar_izq(&list, anterior(loc), largo - 1);
 }
 void orderar_izq(listint_t *list, listint_t *loc, int largo)
 {
@@ -49,7 +49,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 	if (!flag)
 		return;
 	if (largo > 2)
-		ordenar_der(list, siguiente(loc), largo - 1);
+		ordenar_der(&list, siguiente(loc), largo - 1);
 }
 /**
 * cocktail_sort_list - counts the length of a string
@@ -67,5 +67,5 @@ void cocktail_sort_list(listint_t **list)
 		return;
 
 	largo = largo_cadena(*list);
-	ordenar_der(*list, loc, largo);
+	ordenar_der(&*list, loc, largo);
 }
