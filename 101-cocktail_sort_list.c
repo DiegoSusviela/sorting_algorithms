@@ -42,7 +42,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 			flag = 1;
 		}
 		else
-			loc = siguiente(loc);
+			loc = anterior(loc);
 		iter++;
 	}
 	if (!flag)
