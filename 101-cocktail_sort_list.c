@@ -25,7 +25,7 @@ void ordenar_der(listint_t *list, listint_t *loc, int largo)
 	}
 	if (!flag)
 		return;
-	orderar_izq(list, anterior(loc), largo - 1);
+	orderar_izq(list, loc, largo - 1);
 }
 void orderar_izq(listint_t *list, listint_t *loc, int largo)
 {
@@ -47,7 +47,7 @@ void orderar_izq(listint_t *list, listint_t *loc, int largo)
 	}
 	if (!flag)
 		return;
-	ordenar_der(list, siguiente(loc), largo - 1);
+	ordenar_der(list, loc, largo - 1);
 }
 /**
 * cocktail_sort_list - counts the length of a string
